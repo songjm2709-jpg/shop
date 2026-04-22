@@ -2,10 +2,8 @@ FROM php:8.4-cli-alpine
 
 RUN apk add --no-cache \
     git curl unzip zip \
-    libpng-dev libjpeg-turbo-dev freetype-dev \
     libxml2-dev oniguruma-dev \
-    && docker-php-ext-install \
-        pdo pdo_mysql mbstring xml bcmath opcache ctype tokenizer fileinfo
+    && docker-php-ext-install pdo pdo_mysql mbstring xml bcmath opcache
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
