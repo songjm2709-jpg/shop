@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import api from '@/lib/api'
 import { Order } from '@/types'
 
-export default function CheckoutSuccessPage() {
+function CheckoutSuccessContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [order, setOrder] = useState<Order | null>(null)
@@ -95,5 +95,13 @@ export default function CheckoutSuccessPage() {
         <Link href="/products" className="btn-primary flex-1 text-center py-3">계속 쇼핑하기</Link>
       </div>
     </div>
+  )
+}
+
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-gray-400">결제 확인 중...</div>}>
+      <CheckoutSuccessContent />
+    </Suspense>
   )
 }

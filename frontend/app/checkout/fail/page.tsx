@@ -1,9 +1,10 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
-export default function CheckoutFailPage() {
+function CheckoutFailContent() {
   const searchParams = useSearchParams()
   const message = searchParams.get('message') ?? '결제가 취소되었습니다.'
 
@@ -16,5 +17,13 @@ export default function CheckoutFailPage() {
         <Link href="/cart" className="btn-primary">장바구니로 돌아가기</Link>
       </div>
     </div>
+  )
+}
+
+export default function CheckoutFailPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-gray-400">로딩 중...</div>}>
+      <CheckoutFailContent />
+    </Suspense>
   )
 }
