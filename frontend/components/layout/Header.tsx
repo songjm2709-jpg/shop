@@ -38,6 +38,12 @@ export default function Header() {
 
           {user ? (
             <>
+              {user.is_admin && (
+                <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded">
+                  관리자
+                </span>
+              )}
+              <span className="text-sm text-gray-500">{user.name}</span>
               <Link href="/cart" className="relative text-gray-600 hover:text-gray-900">
                 장바구니
                 {cartCount > 0 && (
@@ -49,7 +55,7 @@ export default function Header() {
               <Link href="/orders" className="text-gray-600 hover:text-gray-900">
                 주문내역
               </Link>
-              <button onClick={handleLogout} className="text-gray-600 hover:text-gray-900">
+              <button onClick={handleLogout} className="text-gray-500 hover:text-gray-900 text-sm">
                 로그아웃
               </button>
             </>

@@ -4,6 +4,7 @@ export interface User {
   email: string
   phone: string | null
   address: string | null
+  is_admin: boolean
   created_at: string
 }
 
