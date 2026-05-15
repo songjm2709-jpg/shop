@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <body>
         <Header />
-        <main className="max-w-7xl mx-auto px-4 py-8">{children}</main>
+        <main className="max-w-7xl mx-auto px-4">{children}</main>
       </body>
     </html>
   )

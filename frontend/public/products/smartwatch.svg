@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDE9FE"/>
+      <stop offset="100%" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="watch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" rx="24"/>
+  <!-- 밴드 상단 -->
+  <rect x="164" y="80" width="72" height="70" rx="10" fill="#a78bfa"/>
+  <!-- 밴드 하단 -->
+  <rect x="164" y="250" width="72" height="70" rx="10" fill="#a78bfa"/>
+  <!-- 본체 -->
+  <rect x="145" y="138" width="110" height="124" rx="26" fill="url(#watch)" stroke="#c4b5fd" stroke-width="2.5"/>
+  <!-- 스크린 -->
+  <rect x="157" y="152" width="86" height="96" rx="16" fill="#4c1d95" opacity="0.08"/>
+  <!-- 시계 숫자 -->
+  <text x="200" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6d28d9">10:10</text>
+  <!-- 날짜 -->
+  <text x="200" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#8b5cf6">MAY 14</text>
+  <!-- 하트 아이콘 (건강) -->
+  <text x="200" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f472b6">♥ 72 bpm</text>
+  <!-- 버튼 -->
+  <rect x="255" y="168" width="8" height="30" rx="4" fill="#c4b5fd"/>
+  <!-- 하이라이트 -->
+  <ellipse cx="170" cy="155" rx="10" ry="6" fill="white" opacity="0.5"/>
+  <text x="200" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#5b21b6" opacity="0.8">스마트워치</text>
+</svg>

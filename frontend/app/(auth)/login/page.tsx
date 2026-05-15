@@ -70,7 +70,7 @@ export default function LoginPage() {
 
         <p className="mt-4 text-center text-sm text-gray-500">
           계정이 없으신가요?{' '}
-          <Link href="/register" className="text-blue-600 hover:underline">
+          <Link href="/register" className="text-orange-500 hover:underline font-medium">
             회원가입
           </Link>
         </p>

@@ -19,6 +19,9 @@ export interface Product {
   name: string
   description: string | null
   price: number
+  original_price: number | null
+  discount_rate: number
+  is_new: boolean
   stock: number
   image: string | null
   category?: Category
@@ -80,4 +83,15 @@ export interface PaginatedResponse<T> {
 export interface AuthResponse {
   user: User
   token: string
+}
+
+export interface Coupon {
+  id: number
+  type: string
+  amount: number
+  name: string
+  start_date: string
+  end_date: string
+  d_day: number
+  category: Category | null
 }

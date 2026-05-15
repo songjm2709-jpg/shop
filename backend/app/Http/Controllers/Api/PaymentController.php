@@ -30,7 +30,7 @@ class PaymentController extends Controller
         $response = Http::withBasicAuth(config('services.toss.secret_key'), '')
             ->post('https://api.tosspayments.com/v1/payments/confirm', [
                 'paymentKey' => $request->payment_key,
-                'orderId' => (string) $order->id,
+                'orderId' => str_pad((string) $order->id, 6, '0', STR_PAD_LEFT),
                 'amount' => $request->amount,
             ]);
 

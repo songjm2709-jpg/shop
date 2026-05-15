@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" rx="24"/>
+  <!-- 티셔츠 실루엣 -->
+  <!-- 왼쪽 소매 -->
+  <path d="M 100,130 L 70,170 L 120,185 L 140,155" fill="url(#shirt)" stroke="#fed7aa" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 오른쪽 소매 -->
+  <path d="M 300,130 L 330,170 L 280,185 L 260,155" fill="url(#shirt)" stroke="#fed7aa" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 몸통 -->
+  <path d="M 140,140 L 100,130 L 120,185 L 130,280 L 270,280 L 280,185 L 300,130 L 260,140 C 250,160 230,168 200,168 C 170,168 150,160 140,140 Z" fill="url(#shirt)" stroke="#fed7aa" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 목 라인 -->
+  <path d="M 140,140 Q 200,110 260,140" fill="none" stroke="#fdba74" stroke-width="2.5"/>
+  <!-- 장식 스트라이프 -->
+  <line x1="150" y1="195" x2="250" y2="195" stroke="#fed7aa" stroke-width="1.5"/>
+  <line x1="148" y1="215" x2="252" y2="215" stroke="#fed7aa" stroke-width="1.5"/>
+  <!-- 하이라이트 -->
+  <path d="M 160,145 Q 180,138 200,145" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+  <text x="200" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#92400e" opacity="0.8">기본 티셔츠</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" rx="24"/>
+  <!-- 노트북 거치대 메인 플레이트 -->
+  <rect x="110" y="120" width="180" height="10" rx="5" fill="url(#metal)" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- 거치대 본체 (경사면) -->
+  <polygon points="110,130 290,130 260,240 140,240" fill="url(#metal)" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- 거치대 내부 격자 -->
+  <line x1="165" y1="135" x2="155" y2="235" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="200" y1="133" x2="200" y2="240" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="235" y1="135" x2="245" y2="235" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- 받침대 -->
+  <rect x="135" y="240" width="130" height="12" rx="6" fill="#94a3b8"/>
+  <!-- 고무 발 -->
+  <ellipse cx="155" cy="255" rx="12" ry="5" fill="#64748b"/>
+  <ellipse cx="245" cy="255" rx="12" ry="5" fill="#64748b"/>
+  <!-- 힌지 -->
+  <circle cx="200" cy="240" r="8" fill="#64748b"/>
+  <circle cx="200" cy="240" r="4" fill="#94a3b8"/>
+  <!-- 하이라이트 -->
+  <rect x="115" y="122" width="60" height="3" rx="1.5" fill="white" opacity="0.7"/>
+  <text x="200" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#334155" opacity="0.8">노트북 거치대</text>
+</svg>

@@ -9,12 +9,22 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['category_id', 'name', 'description', 'price', 'stock', 'image'];
+    protected $fillable = ['category_id', 'name', 'description', 'price', 'original_price', 'is_new', 'stock', 'image'];
 
     protected $casts = [
-        'price' => 'integer',
-        'stock' => 'integer',
+        'price'          => 'integer',
+        'original_price' => 'integer',
+        'stock'          => 'integer',
+        'is_new'         => 'boolean',
     ];
+
+    protected $appends = ['discount_rate'];
+
+    public function getDiscountRateAttribute(): int
+    {
+        if (!$this->original_price || $this->original_price <= $this->price) return 0;
+        return (int) round((1 - $this->price / $this->original_price) * 100);
+    }
 
     public function category()
     {

@@ -58,7 +58,7 @@ export default function CheckoutPage() {
       const toss = window.TossPayments(process.env.NEXT_PUBLIC_TOSS_CLIENT_KEY!)
       await toss.requestPayment('카드', {
         amount: order.total_amount,
-        orderId: String(order.id),
+        orderId: String(order.id).padStart(6, '0'),
         orderName: cart.items[0].product.name + (cart.items.length > 1 ? ` 외 ${cart.items.length - 1}건` : ''),
         customerName: form.receiver_name,
         successUrl: `${window.location.origin}/checkout/success`,

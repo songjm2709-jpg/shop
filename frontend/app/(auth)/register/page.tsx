@@ -116,7 +116,7 @@ export default function RegisterPage() {
 
         <p className="mt-4 text-center text-sm text-gray-500">
           이미 계정이 있으신가요?{' '}
-          <Link href="/login" className="text-blue-600 hover:underline">
+          <Link href="/login" className="text-orange-500 hover:underline font-medium">
             로그인
           </Link>
         </p>

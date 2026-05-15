@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CartController;
+use App\Http\Controllers\Api\CouponController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\ProductController;
@@ -13,6 +14,7 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
+Route::get('/coupons', [CouponController::class, 'index']);
 
 // 인증 필요
 Route::middleware('auth:sanctum')->group(function () {

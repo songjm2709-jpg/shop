@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="denim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="denim2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)" rx="24"/>
+  <!-- 허리밴드 -->
+  <rect x="120" y="90" width="160" height="28" rx="6" fill="#1d4ed8"/>
+  <!-- 왼쪽 다리 -->
+  <path d="M 120,118 L 118,290 C 118,305 128,315 143,315 L 190,315 L 200,200 L 210,315 L 257,315 C 272,315 282,305 282,290 L 280,118 Z" fill="url(#denim)"/>
+  <!-- 왼쪽 다리 그림자 -->
+  <path d="M 200,118 L 200,315" stroke="#1d4ed8" stroke-width="3"/>
+  <!-- 스티치 라인 (왼쪽) -->
+  <line x1="148" y1="120" x2="145" y2="310" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- 스티치 라인 (오른쪽) -->
+  <line x1="252" y1="120" x2="255" y2="310" stroke="#93c5fd" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- 포켓 (앞) -->
+  <path d="M 130,130 Q 158,122 165,145" fill="none" stroke="#93c5fd" stroke-width="1.5"/>
+  <path d="M 270,130 Q 242,122 235,145" fill="none" stroke="#93c5fd" stroke-width="1.5"/>
+  <!-- 허리밴드 하이라이트 -->
+  <rect x="125" y="93" width="60" height="4" rx="2" fill="white" opacity="0.3"/>
+  <!-- 버튼 -->
+  <circle cx="200" cy="104" r="4" fill="#93c5fd"/>
+  <text x="200" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#1e40af" opacity="0.9">청바지</text>
+</svg>

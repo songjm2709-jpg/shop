@@ -13,9 +13,10 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-scripts --no-interaction
 
-RUN mkdir -p storage/framework/{sessions,views,cache} \
-    && chmod -R 775 storage bootstrap/cache
+RUN mkdir -p storage/framework/{sessions,views,cache} database \
+    && touch database/database.sqlite \
+    && chmod -R 775 storage bootstrap/cache database
 
 EXPOSE 8080
 
-CMD sh -c "php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
+CMD sh -c "php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
